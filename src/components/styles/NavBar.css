@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+.navbar {
+  background-color: #ffffff;
+  padding: 20px 15vw 20px 15vw;
+  box-shadow: 0px 4px 24px rgba(70, 74, 140, 0.18);
+}
+.dropdown-toggle::after {
+  content: none;
+}
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 25px;
+  color: #333333 !important;
+}
+
+.dropdown {
+  margin-right: 2vw;
+}
+
+.dropdown,
+.dropdown-item {
+  font-family: "Airbnb Cereal App";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+.dropdown-item:hover {
+  font-family: "Airbnb Cereal App";
+  color: black;
+}
+#collasible-nav-dropdown,
+.dropdown-item {
+  color: #828282;
+}
+
+.dropdown-menu {
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 52px rgba(70, 74, 140, 0.24);
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 20px 5vw 20px 5vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .dropdown,
+  .dropdown-item {
+    font-size: 18px;
+  }
+}
