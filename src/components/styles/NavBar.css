@@ -1,22 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-
+:root {
+  font-size: 17px;
+}
 .navbar {
   background-color: #ffffff;
-  padding: 20px 15vw 20px 15vw;
+  padding: 15px 10vw;
   box-shadow: 0px 4px 24px rgba(70, 74, 140, 0.18);
+  margin-bottom: 20px;
+  text-align: center;
 }
+/* for removing Down Symbol */
 .dropdown-toggle::after {
   content: none;
 }
 .navbar-brand {
   font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-size: 25px;
+  font-size: 1.56rem;
   color: #333333 !important;
 }
 
+.navbar-brand:hover {
+  transform: scale(1.03);
+}
+
+#collasible-nav-dropdown:hover,
+.nav-link:hover {
+  transform: scale(1.03);
+}
+.dropdown-item:hover {
+  transform: scale(1.03);
+}
 .dropdown {
   margin-right: 2vw;
+}
+
+.dropdown-divider {
+  margin: 0;
 }
 
 .dropdown,
@@ -24,33 +43,47 @@
   font-family: "Airbnb Cereal App";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .dropdown-item:hover {
-  font-family: "Airbnb Cereal App";
-  color: black;
+  color: #f4f5db;
+  background-color: #007bff;
+}
+.dropdown-item.active .logoutIcon {
+  stroke: #f4f5db;
+}
+.dropdown-item:hover .logoutIcon {
+  stroke: #f4f5db;
 }
 #collasible-nav-dropdown,
 .dropdown-item {
   color: #828282;
 }
-
+.dropdown-item {
+  padding: 11.2px 24px;
+}
 .dropdown-menu {
   border: 1px solid #e0e0e0;
   box-sizing: border-box;
   box-shadow: 0px 4px 52px rgba(70, 74, 140, 0.24);
   border-radius: 5px;
+  padding: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .navbar {
-    padding: 20px 5vw 20px 5vw;
+    padding: 15px 4vw;
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .dropdown,
-  .dropdown-item {
+@media only screen and (max-width: 575px) {
+  :root {
     font-size: 18px;
+  }
+  .navbar {
+    padding: 12px 4vw;
+  }
+  .dropdown-menu {
+    text-align: center;
   }
 }
