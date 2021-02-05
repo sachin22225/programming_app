@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 :root {
-  font-size: 17px;
+  font-size: calc(15px + 0.3vw) !important;
 }
 .navbar {
   background-color: #ffffff;
-  padding: 15px 10vw;
+  padding: 2.4vh 10vw;
   box-shadow: 0px 4px 24px rgba(70, 74, 140, 0.18);
-  margin-bottom: 20px;
+  /* margin-bottom: 3.2vh; */
   text-align: center;
 }
 /* for removing Down Symbol */
@@ -60,7 +60,7 @@
   color: #828282;
 }
 .dropdown-item {
-  padding: 11.2px 24px;
+  padding: 1.79vh 1.75vw;
 }
 .dropdown-menu {
   border: 1px solid #e0e0e0;
@@ -68,22 +68,26 @@
   box-shadow: 0px 4px 52px rgba(70, 74, 140, 0.24);
   border-radius: 5px;
   padding: 0;
+  border: none;
 }
 
 @media only screen and (max-width: 700px) {
   .navbar {
-    padding: 15px 4vw;
+    padding: 2.4vh 4vw;
   }
 }
 
 @media only screen and (max-width: 575px) {
-  :root {
-    font-size: 18px;
-  }
   .navbar {
-    padding: 12px 4vw;
+    padding: 2vh 4vw;
   }
   .dropdown-menu {
     text-align: center;
+  }
+
+  #collasible-nav-dropdown:hover,
+  .nav-link:hover {
+    color: #f4f5db;
+    background-color: #007bff;
   }
 }

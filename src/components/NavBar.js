@@ -1,8 +1,9 @@
-import React, { Component, createRef } from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/NavBar.css";
 import BloggerLogo from './media/BloggerLogo.svg'
 import UserImg from './media/UserImg.svg'
+
 // import LogoutIcon from './media/LogoutIcon.svg'
 
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
@@ -10,11 +11,15 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 export class NavBar extends Component {
     constructor() {
         super();
-        this.dropDownRef = createRef();
-
+        this.dropDownRef = React.createRef();
+        this.state = {
+            windowWidth: window.innerWidth
+        }
     }
-    isDropDownOpen = false;
 
+
+    isDropDownOpen = false;
+    isSmallSize = false;
     getLogoutSVG = () => {
         return (
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,10 +48,21 @@ export class NavBar extends Component {
         }
     }
 
+    handleResize = () => {
+        this.setState({ windowWidth: window.innerWidth });
+    };
+
+    componentDidMount() {
+        window.addEventListener("resize", this.handleResize);
+    }
+
+
+
 
     render() {
         return (
-            <Navbar collapseOnSelect expand="sm" /*bg="light" variant="light"*/>
+
+            <Navbar Navbar collapseOnSelect expand="sm" /*bg="light" variant="light"*/ >
                 <Navbar.Brand href="#home">
                     <img src={BloggerLogo} alt="logo" />{' '}Blogger
                 </Navbar.Brand>
@@ -55,15 +71,16 @@ export class NavBar extends Component {
 
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        {/* <Nav.Link href="#features">Features</Nav.Link>*/}
+                        {/* <Nav.Link href="#features">features</Nav.Link> */}
                     </Nav>
 
                     <Nav>
                         <NavDropdown title="Add a Story" id="collasible-nav-dropdown"
-                            onMouseEnter={this.openDropdown}
-                            onMouseLeave={this.closeDropdown}
+                            onMouseEnter={(this.state.windowWidth > 575) ? this.openDropdown : null}
+                            onMouseLeave={(this.state.windowWidth > 575) ? this.closeDropdown : null}
                             ref={this.dropDownRef}
-                            onClick={this.DropdownClick}
+                            onClick={(this.state.windowWidth > 575) ? this.DropdownClick : null}
+
                         >
                             <NavDropdown.Item href="#Add a Story">Add a Story</NavDropdown.Item>
                             <NavDropdown.Divider />
@@ -86,7 +103,7 @@ export class NavBar extends Component {
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Navbar>
+            </Navbar >
         )
     }
 }

@@ -1,0 +1,138 @@
+.iconContainer {
+  position: absolute;
+  top: 10vh;
+  right: -5%;
+  z-index: 1000;
+}
+
+.ShareIcon,
+.BookmarkIcon {
+  cursor: pointer;
+  position: relative;
+}
+
+.ShareIcon {
+  margin-bottom: 5vh;
+}
+
+.circleContent {
+  position: absolute;
+  left: 33%;
+  top: 35%;
+}
+
+@media only screen and (max-width: 1055px) {
+  .iconContainer {
+    right: -3%;
+  }
+}
+@media only screen and (max-width: 1075px) {
+  .iconContainer {
+    right: -2.5%;
+  }
+  .iconContainer {
+    transform: scale(0.9);
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .iconContainer {
+    right: -2%;
+  }
+  .iconContainer {
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 1015px) {
+  .iconContainer {
+    right: -1.4%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .iconContainer {
+    right: -8%;
+  }
+  .iconContainer {
+    transform: scale(0.9);
+  }
+}
+@media only screen and (max-width: 850px) {
+  .iconContainer {
+    right: -4%;
+  }
+}
+@media only screen and (max-width: 790px) {
+  .iconContainer {
+    right: -3%;
+  }
+  .iconContainer {
+    transform: scale(0.78);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .iconContainer {
+    right: -8%;
+  }
+  .iconContainer {
+    transform: scale(0.9);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .iconContainer {
+    right: -5%;
+  }
+  .iconContainer {
+    transform: scale(0.9);
+  }
+}
+@media only screen and (max-width: 610px) {
+  .iconContainer {
+    right: -3.1%;
+  }
+  .iconContainer {
+    transform: scale(0.75);
+  }
+}
+@media only screen and (max-width: 575px) {
+  .iconContainer {
+    transform: rotate(90deg);
+    top: -20vh;
+    right: 45vw;
+  }
+
+  .ShareIcon {
+    margin-bottom: 5vh;
+  }
+
+  .circleContent {
+    transform: rotate(270deg);
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .iconContainer {
+    top: -19vh;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .iconContainer {
+    top: -22vh;
+    right: 40vw;
+  }
+  .ShareIcon,
+  .BookmarkIcon {
+    transform: scale(0.9);
+  }
+}
+@media only screen and (max-width: 250px) {
+  .iconContainer {
+    top: -21vh;
+  }
+  .ShareIcon,
+  .BookmarkIcon {
+    transform: scale(0.7);
+  }
+}

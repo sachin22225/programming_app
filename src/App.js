@@ -1,14 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from "./components/NavBar";
-
+import BlogPage from './components/BlogPage'
 function App() {
   return (
     <div >
       <NavBar />
-
-      <div className="App">
+      <BlogPage />
+      <div className="App" style={{ border: "solid" }}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>

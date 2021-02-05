@@ -1,0 +1,114 @@
+.CoverHeading {
+  position: relative;
+}
+.blogCover {
+  width: 100%;
+  min-height: 70vh;
+}
+.CoverHeading .heading {
+  position: absolute;
+  bottom: 0;
+  /* important for centering */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 80%;
+  /* important for centering */
+
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* line-height: 3.5rem; */
+  /* min-height: 40%; */
+  /* padding: 2rem 5rem; */
+
+  line-height: calc(40px + 2.5vw);
+  padding: 3vw 10vw;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #333333;
+}
+
+.blogContent {
+  position: relative;
+}
+
+.blogContent .text {
+  text-align: justify;
+  position: relative;
+  padding: 1rem 1.5rem;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.03rem;
+
+  color: #000000;
+}
+
+@media only screen and (max-width: 700px) {
+  .CoverHeading .heading {
+    font-size: 2.2rem;
+    line-height: calc(40px + 2vw);
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .CoverHeading .heading {
+    width: 90%;
+  }
+  .blogContent .text {
+    margin-top: 15vh;
+    line-height: 1.65rem;
+    letter-spacing: 0.02rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .CoverHeading .heading {
+    font-size: 2rem;
+    padding: 4.5vw 10vw;
+    line-height: calc(35px + 1vw);
+  }
+
+  .blogContent .text {
+    padding: 0;
+    line-height: 1.65rem;
+    letter-spacing: 0.015rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .CoverHeading .heading {
+    font-size: 1.65rem;
+    padding: 4.5vw 8vw;
+    line-height: calc(30px + 1vw);
+  }
+
+  .blogContent .text {
+    line-height: 1.5rem;
+    letter-spacing: 0;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .CoverHeading .heading {
+    font-size: 1.4rem;
+    line-height: calc(25px + 1vw);
+  }
+
+  .blogContent .text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .CoverHeading .heading {
+    font-size: 1.2rem;
+    line-height: calc(22px + 1vw);
+  }
+}
