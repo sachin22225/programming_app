@@ -12,7 +12,7 @@
   color: #4b4f60;
 }
 
-.readMore span {
+.readMore .heading span {
   border-bottom: solid;
   border-color: #555bc2;
   border-width: 0.3rem;

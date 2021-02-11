@@ -7,7 +7,7 @@
 }
 .CoverHeading .heading {
   position: absolute;
-  bottom: 0;
+  bottom: -0.5%;
   /* important for centering */
   left: 0;
   right: 0;

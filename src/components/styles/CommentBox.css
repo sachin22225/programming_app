@@ -1,0 +1,77 @@
+.commmentBoxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Gilroy-Medium", sans-serif;
+  color: #000000;
+  /* padding: 1rem 1.5rem; */
+}
+
+.commentBoxHeading {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-family: "Gilroy-Bold", sans-serif;
+  margin-bottom: 5vh;
+  color: #4b4f60;
+}
+
+.commentBoxHeading span {
+  border-bottom: solid;
+  border-color: #555bc2;
+  border-width: 0.3rem;
+  border-radius: 1px;
+}
+
+.commmentBoxContainer textarea {
+  width: 95%;
+  border: 1px solid #bdbdbd;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  min-height: 8vh;
+  margin: 3vh 0;
+  resize: vertical;
+}
+.commmentBoxContainer textarea::placeholder {
+  color: #bdbdbd;
+  font-weight: 500;
+}
+.commmentBoxContainer button {
+  font-family: "Gilroy-Medium", sans-serif;
+  padding: 0.6rem;
+  margin: 4vh 0 10vh 0;
+  width: 35%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  align-self: center;
+  background-color: #2f80ed;
+}
+
+/* .modelCommentBox .modelHeader {
+  box-shadow: 4px 1px 18px 13px rgb(0 0 0 / 8%);
+  border: none;
+} */
+
+.modelCommentBox .modal-content {
+  box-shadow: 4px 1px 18px 13px rgb(0 0 0 / 8%);
+  border: none;
+}
+
+.modelCommentBox .modalText {
+  text-align: center;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 780px) {
+  .commmentBoxContainer button {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .modelCommentBox {
+    top: 5vh;
+    padding-right: 0;
+  }
+}

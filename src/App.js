@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import NavBar from "./components/NavBar";
 import BlogPage from './components/BlogPage'
@@ -7,7 +7,7 @@ function App() {
     <div >
       <NavBar />
       <BlogPage />
-      <div className="App" style={{ border: "solid" }}>
+      {/* <div className="App" style={{ border: "solid" }}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -22,7 +22,7 @@ function App() {
             Learn React
           </a>
         </header>
-      </div>
+      </div> */}
     </div>
   );
 }

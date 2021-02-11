@@ -19,7 +19,7 @@ export class NavBar extends Component {
 
 
     isDropDownOpen = false;
-    isSmallSize = false;
+
     getLogoutSVG = () => {
         return (
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,12 +57,14 @@ export class NavBar extends Component {
     }
 
 
-
+    componentWillUnmount() {
+        document.removeEventListener("resize", this.handleResize);
+    }
 
     render() {
         return (
 
-            <Navbar Navbar collapseOnSelect expand="sm" /*bg="light" variant="light"*/ >
+            <Navbar collapseOnSelect expand="sm" /*bg="light" variant="light"*/ >
                 <Navbar.Brand href="#home">
                     <img src={BloggerLogo} alt="logo" />{' '}Blogger
                 </Navbar.Brand>
