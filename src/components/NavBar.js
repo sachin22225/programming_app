@@ -57,9 +57,9 @@ export class NavBar extends Component {
     }
 
 
-    componentWillUnmount() {
-        document.removeEventListener("resize", this.handleResize);
-    }
+    // componentWillUnmount() {
+    //     document.removeEventListener("resize", this.handleResize);
+    // }
 
     render() {
         return (

@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 import UserImg from './media/UserImg.svg'
 import "./styles/CommentNew.css"
-
+import heartUnlike from "./media/heartUnlike.svg";
+import heartLike from "./media/heartLike.svg";
 export class CommentNew extends Component {
 
-    // getDateTime = () => {
-    //     var options = { year: 'numeric', month: 'short', day: 'numeric' };
-    //     var today = new Date();
-    //     return today.toLocaleDateString("en-US", options);
-    //     // var dateWithoutSecond = new Date();
-    //     // var options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
-    //     // return dateWithoutSecond.toLocaleTimeString([], options)
-    // }
+    handleLikeButtonClick = (e) => {
+        let operation;
+        if (this.props.isLiked === false)
+            operation = "+";
 
-    // getUserName = () => {
-    //     return "Abhishek Shukla";
-    // }
+        else
+            operation = "-";
+
+        let index = parseInt(e.target.getAttribute("index"));
+        this.props.updateLikeCount(index, operation);
+    }
 
     render() {
         return (
@@ -30,9 +30,24 @@ export class CommentNew extends Component {
                         <div className="commentDate">{this.props.datetime}</div>
                     </div>
 
-                    <div>{this.props.text}</div>
+                    <div className="commentText">{this.props.text}</div>
+
+                    <div className="commentFooter">
+                        <span
+                            index={this.props.index}
+                            onClick={this.handleLikeButtonClick}
+                            style={{ fontWeight: this.props.isLiked ? 700 : null }}
+                        >
+                            {this.props.likes === 0 ? null : this.props.likes}
+
+                        </span>
+
+                        <img index={this.props.index} onClick={this.handleLikeButtonClick}
+                            src={this.props.isLiked ? heartLike : heartUnlike} alt="unlike-icon" />
+                    </div>
+
                 </div>
-            </div>
+            </div >
         );
     }
 }
