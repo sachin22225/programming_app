@@ -6,6 +6,10 @@
   color: #000000;
   /* padding: 1rem 1.5rem; */
 }
+.allPostedComment {
+  /* VIM for making individual comments take full width */
+  width: 100%;
+}
 
 .commentBoxHeading {
   text-align: center;
@@ -41,7 +45,9 @@
   color: #bdbdbd;
   font-weight: 500;
 }
+
 .commmentBoxContainer button {
+  --button-size: 35%;
   font-family: "Gilroy-Medium", sans-serif;
   padding: 0.6rem;
   margin: 4vh 0 10vh 0;
@@ -53,6 +59,10 @@
   border-color: #2f80ed;
 }
 
+.loadMoreButton {
+  width: 40% !important;
+  margin: 5vh 0 !important;
+}
 /* .modelCommentBox .modelHeader {
   box-shadow: 4px 1px 18px 13px rgb(0 0 0 / 8%);
   border: none;
@@ -73,6 +83,10 @@
 @media only screen and (max-width: 780px) {
   .commmentBoxContainer button {
     width: 50%;
+  }
+
+  .loadMoreButton {
+    width: 55% !important;
   }
 }
 
