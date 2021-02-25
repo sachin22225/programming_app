@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "id": 1, "name": "DS & Algo" },
+    { "id": 2, "name": "Frontend Dev" },
+    { "id": 2, "name": "Backend Dev" },
+    { "id": 2, "name": "ML/AI" },
+    { "id": 2, "name": "Designing" },
+    { "id": 2, "name": "Marketing" }
+  ]
+}

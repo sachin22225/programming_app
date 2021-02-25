@@ -1,0 +1,40 @@
+.BlogCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(70, 74, 140, 0.12);
+  border-radius: 5px;
+  width: 55vw;
+  min-height: 18.45vh;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  align-self: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p {
+  font-family: Gilroy-Medium;
+  font-size: 11px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #333333;
+}
+
+h6 {
+  font-family: Airbnb Cereal App;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
+img {
+  margin-right: 3%;
+  border-radius: 5px 0px 0px 5px;
+}
